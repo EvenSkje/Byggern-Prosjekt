@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 
-void USART_Init(unsigned int ubrrs)
+void USART_Init()
 {
 	uint16_t ubrr = FOSC / 16 / BAUD - 1;
 	/* baud rate */
@@ -36,4 +36,4 @@ unsigned char USART_Receive( void )
 void printfEnable()
 {
 	fdevopen(USART_Transmit,USART_Receive);	
-};
+}
