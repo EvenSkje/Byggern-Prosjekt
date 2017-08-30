@@ -7,11 +7,15 @@
 
 
 #include <avr/io.h>
+#include <stdio.h>
+#include "USART.h"
+
 
 int main(void)
 {
-    while(1)
-    {
-        //TODO:: Please write your application code 
-    }
+	USART_Init(31);
+	printfEnable();
+	printf("Nicolai\n");
 }
+
+
